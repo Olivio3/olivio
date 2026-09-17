@@ -1,0 +1,24 @@
+{
+  "routes": [
+    {
+      "src": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "Accept",
+          "value": "(?i).*text/markdown.*"
+        }
+      ],
+      "dest": "/api/markdown-index"
+    },
+    {
+      "src": "/",
+      "headers": {
+        "Vary": "Accept"
+      },
+      "continue": true
+    },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/api/404" }
+  ]
+}

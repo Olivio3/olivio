@@ -378,15 +378,16 @@ li,
     content: '';
     position: absolute;
     inset: 0;
-    background-image: linear-gradient(to right, rgba(12, 14, 18, 1) 0%, rgba(12, 14, 18, 0.95) 45%, rgba(12, 14, 18, 0.1) 100%), url("/hero-workspace-laptop.webp");
+    background-image: linear-gradient(to right, rgba(12, 14, 18, 1) 0%, rgba(12, 14, 18, 0.95) 45%, rgba(12, 14, 18, 0.1) 100%), url("/hero-new-bg.png");
     background-size: 85% auto;
-    background-position: right center;
+    background-position: calc(100% + 120px) center;
     background-repeat: no-repeat;
     background-color: rgba(12, 14, 18, 1);
     -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
     mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
     z-index: 0;
 }
+
 
 .hero-container {
     max-width: 1360px;
@@ -481,24 +482,6 @@ li,
 }
 
 
-
-.hero-vertical-tags {
-    position: absolute;
-    right: -45px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    font-family: var(--font-heading);
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.28);
-    pointer-events: none;
-    user-select: none;
-}
 
 /* ==========================================================================
    SESSÃO 2: O QUE EU FAÇO / SOLUÇÕES DIGITAIS

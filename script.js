@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ],
             tags: ["Landing Page", "NewFields", "Design Corporativo", "B2B", "Conversão de Leads", "UI/UX"],
             images: [
-                { src: "/newfields-card.jpg", caption: "Interface principal da Landing Page executiva NewFields" }
+                { src: "/newfields-card.webp", caption: "Interface principal da Landing Page executiva NewFields" }
             ]
         },
         lucas: {
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
             previewUrl: "sitelucas/index.html",
             previewDisplayUrl: "https://lucasevangelista.com.br",
             images: [
-                { src: "/lucas-card.jpg", caption: "Interface do portfólio de Lucas Evangelista em laptop" }
+                { src: "/lucas-card.webp", caption: "Interface do portfólio de Lucas Evangelista em laptop" }
             ]
         }
     };

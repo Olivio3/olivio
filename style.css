@@ -66,12 +66,14 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 body {
     background-color: #07090e;
     color: var(--text-white);
     font-family: var(--font-body);
+    font-size: 16px;
     line-height: 1.6;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
@@ -372,6 +374,7 @@ li,
     align-items: center;
     justify-content: center;
     position: relative;
+    background-color: rgba(12, 14, 18, 1);
 }
 
 .hero-section::before {
@@ -379,12 +382,12 @@ li,
     position: absolute;
     inset: 0;
     background-image: linear-gradient(to right, rgba(12, 14, 18, 1) 0%, rgba(12, 14, 18, 0.95) 45%, rgba(12, 14, 18, 0.1) 100%), url("/hero-new-bg.png");
-    background-size: 85% auto;
+    background-size: cover;
     background-position: calc(100% + 120px) center;
     background-repeat: no-repeat;
     background-color: rgba(12, 14, 18, 1);
-    -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, transparent 15%, black 45%, black 100%);
+    mask-image: linear-gradient(to right, transparent 0%, transparent 15%, black 45%, black 100%);
     z-index: 0;
 }
 
@@ -987,7 +990,7 @@ li,
 }
 
 .about-bio-text {
-    font-size: 1.05rem;
+    font-size: 16px;
     color: var(--text-muted);
     line-height: 1.7;
     margin-bottom: 35px;
@@ -1481,18 +1484,43 @@ li,
         clip-path: none;
         border-radius: 18px;
         grid-template-columns: 1fr;
-        padding: 40px 30px;
+        padding: 40px 15px;
     }
 
     .problem-dark-callout {
-        justify-content: flex-start;
-        padding-left: 10px;
+        justify-content: center;
+        padding: 15px 15px 10px;
+    }
+
+    .handwritten-annotation {
+        transform: none;
+        align-items: center;
+        text-align: center;
+    }
+
+    .handwritten-arrow {
+        display: none;
     }
 
     .process-steps-row {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+        gap: 15px;
+    }
+
+    .step-num {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+    }
+
+    .step-title {
+        font-size: 1rem;
+        word-break: break-word;
+    }
+
+    .step-desc {
+        font-size: 0.85rem;
+        word-break: break-word;
     }
 
     .step-connector {
@@ -1511,6 +1539,13 @@ li,
 
     .about-col-skills {
         text-align: left;
+        padding: 25px 20px;
+    }
+
+    .badge-text {
+        white-space: normal;
+        font-size: 1.25rem;
+        line-height: 1.3;
     }
 }
 
@@ -1540,10 +1575,7 @@ li,
         grid-template-columns: 1fr;
     }
 
-    .process-steps-row {
-        grid-template-columns: 1fr;
-        gap: 28px;
-    }
+
 
     .cta-banner-card {
         padding: 50px 24px;

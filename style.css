@@ -1603,4 +1603,12 @@ li,
     .project-modal-dialog {
         padding: 30px 20px;
     }
+
+    .problem-section,
+    .projects-section,
+    .process-section,
+    .about-section,
+    .cta-footer-section {
+        padding: 60px 5%;
+    }
 }

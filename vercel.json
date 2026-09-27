@@ -18,6 +18,15 @@
       },
       "continue": true
     },
+    {
+      "src": "/mjp",
+      "dest": "/mjp.html"
+    },
+    {
+      "src": "/mjp.html",
+      "status": 301,
+      "headers": { "Location": "/mjp" }
+    },
     { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/api/404" }
   ]

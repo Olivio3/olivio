@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manual do Jovem Profissional | O Guia Definitivo para sua Carreira</title>
+  <meta name="description"
+    content="Um guia prático para quem está começando a construir sua vida profissional e quer se preparar para o mercado de trabalho com segurança.">
+  <meta property="og:title" content="Manual do Jovem Profissional">
+  <meta property="og:description"
+    content="Tudo o que a faculdade não ensina sobre o mercado de trabalho. Currículo, LinkedIn, postura e muito mais.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/mjp/livro-capa.png">
+  <link rel="icon" href="/favicon-32x32.png" type="image/png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS Global do Site Olivio -->
+
+  <style>
+    /* Estilos específicos complementares para a página do eBook MJP harmonizados com o Design System */
+
+    /* Desativa imagem de fundo do Hero (celular/hero-new-bg) na página MJP */
+    .hero-section::before {
+      display: none !important;
+    }
+
+    .hero-section {
+      min-height: 100vh !important;
+      min-height: 100dvh !important;
+      height: 100vh !important;
+      height: 100dvh !important;
+      padding: 90px 5% 40px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background-color: transparent !important;
+      background-image: radial-gradient(ellipse at 50% 25%, rgba(1, 22, 64, 0.45) 0%, rgba(12, 14, 18, 0.95) 75%) !important;
+    }
+
+    .hero-container {
+      width: 100%;
+    }
+
+    .mjp-nav-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: var(--accent-blue-light);
+      text-transform: uppercase;
+    }
+
+    .mjp-nav-badge span {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent-blue);
+      box-shadow: 0 0 10px var(--accent-blue);
+    }
+
+    /* Hero Book Wrapper */
+    .mjp-hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .mjp-book-card {
+      position: relative;
+      background: var(--bg-dark-surface);
+      border: 1px solid var(--border-dark);
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+      transition: var(--transition-smooth);
+      max-width: 420px;
+      width: 100%;
+    }
+
+    .mjp-book-card:hover {
+      border-color: rgba(77, 142, 235, 0.45);
+      transform: translateY(-6px);
+      box-shadow: 0 35px 90px rgba(1, 22, 64, 0.6);
+    }
+
+    .mjp-book-tag {
+      position: absolute;
+      top: -14px;
+      right: 20px;
+      background: var(--text-white);
+      color: var(--text-dark);
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 50px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .mjp-book-img {
+      width: 100%;
+      border-radius: 18px;
+      object-fit: cover;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .mjp-book-meta {
+      margin-top: 18px;
+      text-align: center;
+    }
+
+    .mjp-book-meta span {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent-blue-light);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .mjp-book-meta h3 {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-white);
+      letter-spacing: 0.5px;
+    }
+
+    /* Readers proof badge */
+    .mjp-readers-badge {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 10px 18px;
+      border-radius: 50px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-dark);
+      backdrop-filter: blur(10px);
+    }
+
+    .mjp-readers-avatars {
+      display: flex;
+    }
+
+    .mjp-readers-avatars img {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 2px solid var(--bg-dark);
+      margin-left: -8px;
+      object-fit: cover;
+    }
+
+    .mjp-readers-avatars img:first-child {
+      margin-left: 0;
+    }
+
+    .mjp-readers-text {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.25;
+    }
+
+    .mjp-readers-text strong {
+      color: var(--text-white);
+      display: block;
+    }
+
+    /* Grid Sections */
+    .mjp-section {
+      padding: 110px 5%;
+      position: relative;
+    }
+
+    .mjp-container {
+      max-width: 1360px;
+      margin: 0 auto;
+    }
+
+    .mjp-header-center {
+      text-align: center;
+      max-width: 1050px;
+      margin: 0 auto 60px;
+    }
+
+    .mjp-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    @media (max-width: 960px) {
+      .mjp-grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Pillar Feature Card */
+    .mjp-feature-card {
+      background: var(--bg-dark-surface);
+      border: 1px solid var(--border-dark);
+      border-radius: 20px;
+      padding: 36px 32px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition-smooth);
+    }
+
+    .mjp-feature-card:hover {
+      border-color: rgba(77, 142, 235, 0.4);
+      background: #171A21;
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(1, 22, 64, 0.4);
+    }
+
+    .mjp-feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: rgba(77, 142, 235, 0.12);
+      color: var(--accent-blue-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .mjp-feature-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-white);
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    .mjp-feature-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* Two Columns Section: What's inside + Who it is for */
+    .mjp-split-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    @media (max-width: 992px) {
+      .mjp-split-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .mjp-check-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .mjp-check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .mjp-check-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: rgba(77, 142, 235, 0.15);
+      color: var(--accent-blue-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .mjp-check-text {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-white);
+      line-height: 1.5;
+    }
+
+    /* Target Audience Card */
+    .mjp-target-card {
+      background: #11141A;
+      background-image: radial-gradient(ellipse at 80% 20%, rgba(1, 22, 64, 0.6) 0%, rgba(17, 20, 26, 0.98) 100%);
+      border: 1px solid var(--border-dark);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mjp-target-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--text-white);
+      margin-bottom: 28px;
+    }
+
+    .mjp-target-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .mjp-target-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .mjp-target-item:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .mjp-step-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--accent-blue-light);
+      font-family: var(--font-heading);
+      font-size: 0.9rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .mjp-target-item-content strong {
+      display: block;
+      color: var(--text-white);
+      font-size: 1.02rem;
+      margin-bottom: 4px;
+    }
+
+    .mjp-target-item-content p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Pricing Section */
+    .mjp-pricing-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .mjp-pricing-card {
+      background: #11141A;
+      background-image: radial-gradient(ellipse at 50% 0%, rgba(1, 22, 64, 0.75) 0%, rgba(17, 20, 26, 0.98) 100%);
+      border: 1px solid rgba(122, 169, 223, 0.3);
+      border-radius: 28px;
+      padding: 60px 48px;
+      text-align: center;
+      box-shadow: 0 35px 80px rgba(0, 0, 0, 0.7);
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media (max-width: 600px) {
+      .mjp-pricing-card {
+        padding: 40px 24px;
+      }
+    }
+
+    .mjp-pricing-badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: linear-gradient(135deg, #4D8EEB 0%, #011640 100%);
+      color: #FFFFFF;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 8px 24px;
+      border-bottom-left-radius: 20px;
+      border-left: 1px solid rgba(255, 255, 255, 0.2);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .mjp-benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      max-width: 640px;
+      margin: 36px auto 36px;
+      text-align: left;
+    }
+
+    @media (max-width: 640px) {
+      .mjp-benefits-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .mjp-benefit-pill {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-dark);
+      padding: 14px 18px;
+      border-radius: 14px;
+    }
+
+    .mjp-benefit-pill span {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text-white);
+    }
+
+    .mjp-benefit-check {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(77, 142, 235, 0.15);
+      color: var(--accent-blue-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .mjp-price-block {
+      margin-bottom: 32px;
+    }
+
+    .mjp-price-old {
+      font-size: 0.95rem;
+      color: var(--text-faint);
+      text-decoration: line-through;
+      margin-bottom: 4px;
+    }
+
+    .mjp-price-current {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .mjp-price-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent-blue-light);
+    }
+
+    .mjp-price-val {
+      font-family: var(--font-heading);
+      font-size: clamp(2.8rem, 5vw, 4rem);
+      font-weight: 800;
+      color: var(--text-white);
+      line-height: 1;
+    }
+
+    /* Author Section */
+    .mjp-author-box {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+      background: var(--bg-dark-surface);
+      border: 1px solid var(--border-dark);
+      border-radius: 28px;
+      padding: 50px 36px;
+      position: relative;
+    }
+
+    .mjp-author-avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 24px;
+      border: 3px solid var(--accent-blue-light);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .mjp-author-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .mjp-author-box h3 {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text-white);
+      margin-bottom: 12px;
+    }
+
+    .mjp-author-box p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .mjp-security-note {
+      font-size: 0.82rem;
+      color: var(--text-faint);
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    /* Sessão Preview das Páginas do Ebook (Layout Dividido com Leque à Direita) */
+    .mjp-preview-split {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 50px;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 992px) {
+      .mjp-preview-split {
+        grid-template-columns: 1fr;
+        gap: 60px;
+      }
+    }
+
+    .mjp-preview-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .mjp-preview-features-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .mjp-preview-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .mjp-preview-feature-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(77, 142, 235, 0.15);
+      color: var(--accent-blue-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .mjp-preview-feature-text strong {
+      display: block;
+      color: var(--text-white);
+      font-size: 0.98rem;
+      margin-bottom: 2px;
+    }
+
+    .mjp-preview-feature-text p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Container do Efeito Leque */
+    .mjp-fan-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 520px;
+      height: 520px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (max-width: 600px) {
+      .mjp-fan-wrapper {
+        height: 420px;
+        max-width: 360px;
+      }
+    }
+
+    .mjp-fan-card {
+      position: absolute;
+      width: 270px;
+      background: #FFFFFF;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.1);
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      transform-origin: bottom center;
+    }
+
+    @media (max-width: 600px) {
+      .mjp-fan-card {
+        width: 210px;
+      }
+    }
+
+    .mjp-fan-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Posições do Leque */
+    .mjp-fan-card.card-left {
+      transform: translateX(-65px) translateY(15px) rotate(-11deg);
+      z-index: 1;
+    }
+
+    .mjp-fan-card.card-center {
+      transform: translateX(0px) translateY(0px) rotate(0deg);
+      z-index: 2;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(77, 142, 235, 0.3);
+    }
+
+    .mjp-fan-card.card-right {
+      transform: translateX(65px) translateY(15px) rotate(11deg);
+      z-index: 3;
+    }
+
+    /* Hover sutil no leque: sem movimentação brusca, sem alterar tamanho, apenas brilho elegante */
+    .mjp-fan-card {
+      transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .mjp-fan-card:hover {
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 24px rgba(77, 142, 235, 0.45) !important;
+      outline: 1.5px solid var(--accent-blue-light);
+    }
+  </style>
+  <link rel="stylesheet" crossorigin href="/assets/style-CmgWVBzW.css">
+</head>
+
+<body>
+
+  <!-- Header / Navbar idêntico ao portfólio -->
+  <header class="main-header" id="mainHeader">
+    <div class="header-container">
+      <a href="/" class="brand-logo" aria-label="Voltar para a página inicial">OLIVIO</a>
+
+      <nav class="header-nav">
+        <a href="/" class="nav-link">Início</a>
+        <a href="#conteudo" class="nav-link">O que você aprende</a>
+        <a href="#previa" class="nav-link">Prévia</a>
+        <a href="#para-quem" class="nav-link">Para quem é</a>
+        <a href="#preco" class="nav-link">Garantir Ebook</a>
+      </nav>
+
+      <div class="header-socials">
+        <a href="https://pay.hotmart.com/X107744959N?off=1rnaucuq&hotfeature=51" target="_blank"
+          rel="noopener noreferrer" class="btn-pill" style="padding: 9px 20px; font-size: 0.84rem;">
+          <span>Comprar agora</span>
+          <span class="btn-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sessão Hero MJP -->
+  <section class="hero-section" id="hero">
+    <div class="hero-container" style="grid-template-columns: 1.2fr 0.9fr;">
+
+      <div class="hero-content" style="padding-top: 35px;">
+        <span class="section-tag" style="margin-bottom: 16px;">E-BOOK DIGITAL • CARREIRA</span>
+        <h1 class="hero-heading">
+          TUDO O QUE A FACULDADE NÃO TE ENSINA SOBRE O <span
+            class="highlight-blue">MERCADO&nbsp;DE&nbsp;TRABALHO.</span>
+        </h1>
+        <p class="hero-description">
+          Um guia prático para quem está começando a construir sua vida profissional e quer entender melhor como se
+          preparar, se posicionar com autoridade e tomar decisões mais conscientes.
+        </p>
+
+        <div class="hero-action"
+          style="display: flex; flex-direction: column; gap: 20px; margin-top: 40px; margin-bottom: 25px;">
+          <a href="https://pay.hotmart.com/X107744959N?off=1rnaucuq&hotfeature=51" target="_blank"
+            rel="noopener noreferrer" class="btn-pill btn-cta" style="width: fit-content;">
+            <span>Quero Garantir Meu Guia Agora</span>
+            <span class="btn-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <!-- Prova Social Leitores -->
+          <div class="mjp-readers-badge">
+            <div class="mjp-readers-avatars">
+              <img src="https://i.pravatar.cc/100?img=11" alt="Leitor do guia">
+              <img src="https://i.pravatar.cc/100?img=32" alt="Leitor do guia">
+              <img src="https://i.pravatar.cc/100?img=68" alt="Leitor do guia">
+            </div>
+            <div class="mjp-readers-text">
+              <strong>+500 leitores</strong> acelerando seus primeiros passos
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mjp-hero-visual">
+        <div class="mjp-book-card">
+          <div class="mjp-book-tag">Acesso Imediato</div>
+          <img src="/mjp/livro-capa.png" alt="Capa do Manual do Jovem Profissional" class="mjp-book-img">
+          <div class="mjp-book-meta">
+            <span>Formato Digital (PDF)</span>
+            <h3>Manual do Jovem Profissional</h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sessão Pilares / Problema & Solução -->
+  <section class="mjp-section" id="conteudo">
+    <div class="mjp-container">
+      <div class="mjp-header-center">
+        <span class="section-tag tag-center">TRANSIÇÃO DE CARREIRA</span>
+        <h2 class="section-heading" style="font-size: clamp(1.6rem, 2.8vw, 2.7rem); line-height: 1.25; margin: 0 auto;">
+          <span style="display: block; white-space: normal;">SAIR DA FACULDADE NÃO DEVERIA SER</span>
+          <span style="display: block; white-space: normal;">UM <span class="highlight-blue">SALTO NO ESCURO.</span></span>
+        </h2>
+        <p class="services-intro-text" style="margin: 16px auto 0; text-align: center;">
+          Você estudou anos para dominar sua área técnica, mas e agora? Como se destacar em processos seletivos
+          concorridos, negociar suas primeiras oportunidades ou construir uma rede de contatos sólida?
+        </p>
+      </div>
+
+      <div class="mjp-grid-3">
+        <!-- Card 1 -->
+        <div class="mjp-feature-card">
+          <div>
+            <div class="mjp-feature-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                </path>
+              </svg>
+            </div>
+            <h3>Currículo &amp; Entrevistas</h3>
+            <p>Descubra como estruturar um currículo estratégico que chama a atenção dos recrutadores e domine técnicas
+              para brilhar em entrevistas, mesmo com pouca experiência.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="mjp-feature-card">
+          <div>
+            <div class="mjp-feature-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                </path>
+              </svg>
+            </div>
+            <h3>LinkedIn &amp; Posicionamento</h3>
+            <p>Aprenda a utilizar o LinkedIn de maneira inteligente para ser encontrado por boas empresas e construir
+              uma marca pessoal reconhecida desde o início.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="mjp-feature-card">
+          <div>
+            <div class="mjp-feature-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3>Postura &amp; Comunicação</h3>
+            <p>Desenvolva inteligência emocional, habilidades de comunicação interpessoal e a postura profissional
+              madura que acelera reconhecimentos e promoções.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sessão O que você vai encontrar + Para quem é -->
+  <section class="mjp-section" id="para-quem" style="padding-top: 20px;">
+    <div class="mjp-container">
+      <div class="mjp-split-grid">
+
+        <!-- Lado esquerdo: O que você vai aprender -->
+        <div>
+          <span class="section-tag">CONTEÚDO PRÁTICO</span>
+          <h2 class="section-heading" style="margin-bottom: 20px;">
+            O QUE VOCÊ VAI ENCONTRAR<br>
+            AO LONGO DO <span class="highlight-blue">MANUAL:</span>
+          </h2>
+          <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7;">
+            Mais do que ensinar apenas como conseguir um emprego, o objetivo é ajudar você a compreender o mercado
+            corporativo moderno, se posicionar com segurança e tomar decisões inteligentes sobre sua própria trajetória.
+          </p>
+
+          <ul class="mjp-check-list">
+            <li class="mjp-check-item">
+              <div class="mjp-check-icon">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <span class="mjp-check-text">Como organizar sua rotina de estudos e evolução contínua de
+                competências</span>
+            </li>
+            <li class="mjp-check-item">
+              <div class="mjp-check-icon">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <span class="mjp-check-text">Estratégias reais para lidar com feedbacks e frustrações sem travar</span>
+            </li>
+            <li class="mjp-check-item">
+              <div class="mjp-check-icon">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <span class="mjp-check-text">Os erros mais caros cometidos por iniciantes e o mapa para evitá-los</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Lado direito: Card Para quem é -->
+        <div>
+          <div class="mjp-target-card">
+            <span class="section-tag" style="color: var(--accent-blue-light); margin-bottom: 8px;">PÚBLICO-ALVO</span>
+            <h3>Para quem é este manual?</h3>
+
+            <div class="mjp-target-list">
+              <div class="mjp-target-item">
+                <div class="mjp-step-num">01</div>
+                <div class="mjp-target-item-content">
+                  <strong>Estudantes universitários</strong>
+                  <p>Que querem se preparar antes de pegar o diploma e largar muito à frente da concorrência.</p>
+                </div>
+              </div>
+
+              <div class="mjp-target-item">
+                <div class="mjp-step-num">02</div>
+                <div class="mjp-target-item-content">
+                  <strong>Recém-formados</strong>
+                  <p>Que se sentem perdidos e buscam clareza e direção prática para entrar no mercado.</p>
+                </div>
+              </div>
+
+              <div class="mjp-target-item">
+                <div class="mjp-step-num">03</div>
+                <div class="mjp-target-item-content">
+                  <strong>Jovens em início de carreira</strong>
+                  <p>Que já estão trabalhando e querem acelerar seu crescimento profissional com maturidade.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Sessão Prévia do Conteúdo & Autoridade (pag1, pag2, pag3 em leque à direita) -->
+  <section class="mjp-section" id="previa" style="padding-top: 10px;">
+    <div class="mjp-container">
+      <div class="mjp-preview-split">
+        
+        <!-- Lado Esquerdo: Conteúdo resumido & autoridade -->
+        <div class="mjp-preview-content">
+          <span class="section-tag" style="margin-bottom: 14px;">POR DENTRO DO MANUAL</span>
+          <h2 class="section-heading" style="margin-bottom: 20px;">
+            CONTEÚDO DIRETO AO PONTO,<br>
+            SEM TEORIAS <span class="highlight-blue">DESNECESSÁRIAS.</span>
+          </h2>
+          <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7;">
+            Veja uma prévia real das páginas internas do e-book. Cada capítulo foi desenhado com diagramação profissional, linguagem prática e estratégias acionáveis que você aplica no mesmo dia.
+          </p>
+
+          <ul class="mjp-preview-features-list">
+            <li class="mjp-preview-feature-item">
+              <div class="mjp-preview-feature-icon">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <div class="mjp-preview-feature-text">
+                <strong>LinkedIn que atrai recrutadores</strong>
+                <p>Estrutura visual de foto, banner e headline estratégica para ser encontrado pelas melhores oportunidades.</p>
+              </div>
+            </li>
+
+            <li class="mjp-preview-feature-item">
+              <div class="mjp-preview-feature-icon">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <div class="mjp-preview-feature-text">
+                <strong>Adaptação e postura nos primeiros 90 dias</strong>
+                <p>Como propor melhorias com contexto, receber feedbacks com maturidade e se destacar perante gestores.</p>
+              </div>
+            </li>
+
+            <li class="mjp-preview-feature-item">
+              <div class="mjp-preview-feature-icon">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <div class="mjp-preview-feature-text">
+                <strong>Educação financeira para o início</strong>
+                <p>Divisão inteligente do primeiro salário, montagem da reserva de emergência e investimentos sem complicação.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Lado Direito: As 3 páginas juntas em formato de leque -->
+        <div class="mjp-fan-wrapper" aria-label="Prévia das páginas em leque">
+          <!-- Página 1 (Esquerda do leque) -->
+          <div class="mjp-fan-card card-left" title="Passe o mouse para destacar">
+            <img src="/pag1.jpeg" alt="Página do Ebook - Capítulo 4: LinkedIn" loading="lazy">
+          </div>
+
+          <!-- Página 2 (Centro do leque) -->
+          <div class="mjp-fan-card card-center" title="Passe o mouse para destacar">
+            <img src="/pag2.jpeg" alt="Página do Ebook - Primeiros 90 Dias e Adaptação" loading="lazy">
+          </div>
+
+          <!-- Página 3 (Direita do leque) -->
+          <div class="mjp-fan-card card-right" title="Passe o mouse para destacar">
+            <img src="/pag3.jpeg" alt="Página do Ebook - Capítulo 11: Educação Financeira" loading="lazy">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Sessão Preço & Oferta -->
+  <section class="mjp-section" id="preco">
+    <div class="mjp-container">
+      <div class="mjp-pricing-wrapper">
+        <div class="mjp-pricing-card">
+          <div class="mjp-pricing-badge">Oferta Especial</div>
+
+          <span class="section-tag tag-center" style="color: var(--accent-blue-light);">INVESTIMENTO NO SEU
+            FUTURO</span>
+          <h2 class="section-heading" style="font-size: clamp(1.8rem, 3.2vw, 2.6rem); margin-bottom: 16px;">
+            TUDO O QUE VOCÊ PRECISA PARA<br>
+            <span class="highlight-blue">ALAVANCAR SUA CARREIRA.</span>
+          </h2>
+
+          <!-- Grade de bônus / inclusos -->
+          <div class="mjp-benefits-grid">
+            <div class="mjp-benefit-pill">
+              <div class="mjp-benefit-check">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <span>E-book completo em PDF</span>
+            </div>
+
+            <div class="mjp-benefit-pill">
+              <div class="mjp-benefit-check">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <span>Modelo pronto de Currículo</span>
+            </div>
+
+            <div class="mjp-benefit-pill">
+              <div class="mjp-benefit-check">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <span>Checklist para Entrevistas</span>
+            </div>
+
+            <div class="mjp-benefit-pill">
+              <div class="mjp-benefit-check">
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <span>Acesso imediato e vitalício</span>
+            </div>
+          </div>
+
+          <!-- Preço -->
+          <div class="mjp-price-block">
+            <div class="mjp-price-old">De R$ 29,90</div>
+            <div class="mjp-price-current">
+              <span class="mjp-price-label">Por apenas</span>
+              <span class="mjp-price-val">R$ 19,90</span>
+            </div>
+          </div>
+
+          <!-- CTA de Compra -->
+          <a href="https://pay.hotmart.com/X107744959N?off=1rnaucuq&hotfeature=51" target="_blank"
+            rel="noopener noreferrer" class="btn-pill btn-cta" style="font-size: 1.05rem; padding: 16px 40px;">
+            <span>Quero Garantir Meu Guia Agora</span>
+            <span class="btn-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <div class="mjp-security-note">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+              </path>
+            </svg>
+            Compra 100% segura • Acesso imediato via Hotmart
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sessão Sobre o Autor -->
+  <section class="mjp-section" style="padding-top: 10px;">
+    <div class="mjp-container">
+      <div class="mjp-author-box">
+        <div class="mjp-author-avatar">
+          <img src="/eu.webp" alt="Edvaldo Olivio - Autor do Manual do Jovem Profissional">
+        </div>
+        <span class="section-tag tag-center">SOBRE O AUTOR</span>
+        <h3>EDVALDO OLIVIO</h3>
+        <p style="margin-bottom: 12px;">
+          Comecei minha jornada como jovem aprendiz e construí experiência em multinacionais antes de migrar para a área
+          de desenvolvimento de produtos digitais e web.
+        </p>
+        <p style="color: var(--text-faint); font-size: 0.92rem; max-width: 600px; margin: 0 auto; text-wrap: balance;">
+          Criei este manual para compartilhar de forma direta o que realmente funciona<br>
+          para se destacar, ter postura e crescer no mercado de trabalho desde o início.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sessão CTA Banner Final & Rodapé (Idêntico ao Portfólio) -->
+  <section class="cta-footer-section">
+    <div class="cta-banner-wrapper">
+      <div class="cta-banner-card"
+        style="background-image: linear-gradient(180deg, rgba(12, 14, 18, 0.78) 0%, rgba(12, 14, 18, 0.92) 100%), url('/footer-bg.webp');">
+        <span class="section-tag tag-center">PRONTO PARA EVOLUIR?</span>
+        <h2 class="cta-banner-heading">
+          PRONTO PARA DAR O PRÓXIMO PASSO<br>
+          NA SUA&nbsp;CARREIRA?
+        </h2>
+        <p style="color: var(--text-muted); max-width: 600px; margin: -15px auto 35px; line-height: 1.6;">
+          Tenha acesso imediato ao guia prático que vai transformar a forma como você se posiciona no mercado de
+          trabalho.
+        </p>
+        <div class="cta-banner-action">
+          <a href="https://pay.hotmart.com/X107744959N?off=1rnaucuq&hotfeature=51" target="_blank"
+            rel="noopener noreferrer" class="btn-pill btn-cta">
+            <span>Quero Adquirir o Manual Agora</span>
+            <span class="btn-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer-bar">
+      <div class="footer-container">
+        <a href="/" class="footer-logo">OLIVIO</a>
+        <div class="footer-divider-line"></div>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/oiolivio/" target="_blank" rel="noopener noreferrer"
+            class="social-icon-link" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/edvaldoolivio/" target="_blank" rel="noopener noreferrer"
+            class="social-icon-link" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+</body>
+
+</html>
